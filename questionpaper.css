@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+* { box-sizing: border-box; }
+
+html { height: 100%; }
+
+body {
+  height: 100%;
+  font-family: Roboto, san-serif;
+  font-weight: 300;
+  background-color: #f5f6f7;
+}
+
+
+/* Form element setup */
+form {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 300px;
+  transform: translateX(-50%);
+  margin: 2rem 0;
+  z-index: 1;
+}
+
+fieldset {
+  margin: 0 0 1rem 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  font-weight: 400;
+}
+
+legend,
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+input[type='text'],
+textarea,
+select {
+  display: block;
+  padding: .5rem;
+  width: 100%;
+  background-color: white;
+  border-radius: .25rem;
+  border: 1px solid #e5e5e5;
+  outline: none;
+
+  /* List some properties that might change */
+  transition-property: none;
+  transition-duration: none;
+
+  &:focus {
+    border-color: rgb(239,126,173);
+  }
+}
+
+textarea {
+  max-width: 300px;
+  height: 100px;
+}
+
+input[type='text'],
+select {
+  height: 34px;
+}
+
+select {
+  font-size: .875rem;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: relative;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  margin: 0 .5rem;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  /* List some properties that might change */
+  transition-property: none;
+  transition-duration: none;
+}
+
+input[type='checkbox'] {
+  border-radius: 5px;
+
+  &:checked {
+    background-color: rgb(239,126,173);
+    border: none;
+
+    &:after {
+      display: block;
+      content: '';
+      height: 4px;
+      width: 10px;
+      border-bottom: 3px solid #fff;
+      border-left: 3px solid #fff;
+      transform: translate(5px,6px) rotate(-45deg) scale(1);
+    }
+  }
+}
+
+input[type='radio'] {
+  border-radius: 50%;
+
+  &:checked {
+    border-width: 5px;
+    border-color: white;
+    background-color: rgb(239,126,173);
+  }
+}
+
+
+
+input[type='submit'] {
+  display: block;
+  margin: 3em auto;
+  padding: .5rem 2rem;
+  font-size: 125%;
+  color: white;
+  border: none;
+  border-radius: .25rem;
+  background-color: rgb(239,126,173);
+  outline: none;
+  box-shadow: 0 .4rem .1rem -.3rem rgba(0,0,0,.1);
+
+  /* We'll talk about this next */
+  transform: perspective(300px) scale(.95) translateZ(0);
+  transform-style: preserve-3d;
+
+  /* List the properties that you're looking to transition.
+     Try not to use 'all' */
+  transition-property: none;
+
+  /* This applies to all of the above properties */
+  transition-duration: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(255,150,200);
+    box-shadow: 0 0 0 0 rgba(0,0,0,0);
+    transform: scale(1.1) rotateX(0);
+  }
+
+  &:active {
+    background-color: rgb(239,126,173);
+    transform: scale(1.05) rotateX(-10deg);
+  }
+}

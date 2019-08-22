@@ -1,0 +1,53 @@
+/* General Properties */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:400;
+  color: rgba(0, 0, 0, .7);
+  background-color: #f3f3f3;
+}
+
+/* UI Utils */
+.content {
+  width:100%;
+  padding:16px;
+}
+
+.content.centered {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+ }
+
+/* UI Elements */
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 300;
+} 
+
+textarea {
+  resize: none;
+  min-width:50%;
+  font-size:14px;
+  line-height:16px;
+  padding: 16px;
+  border:none;
+}
+
+textarea:focus {
+  outline:none;
+  box-shadow: 0 13px 38px 0 rgba(0, 0, 0, 0.4);
+}
+
+.separator {
+  width:50%;
+  height:2px;
+  background:rgba(0, 0, 0, .1);
+  margin:16px 0;
+  
+}
